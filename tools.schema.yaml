@@ -11,7 +11,7 @@ tool:
   websiteUrl: str(matches='^https?://.+')
   categories: list(include('category'))
 
-# see tool-categories.yml
+# see tool-categories.yaml
 category: >
   enum(
   'opensource',
