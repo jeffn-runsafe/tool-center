@@ -2076,13 +2076,10 @@
   - distribute
   - transform
 - name: Sunshine
-  publisher: Luca Capacci
+  publisher: CycloneDX
   description: Sunshine is an open-source SBOM visualization tool.
-  websiteUrl: https://lucacapacci.github.io/Sunshine/
-  repoUrl: https://github.com/lucacapacci/Sunshine/
+  websiteUrl: https://cyclonedx.github.io/Sunshine/
+  repoUrl: https://github.com/CycloneDX/Sunshine/
   categories:
   - opensource
   - analysis
-
-# `description` will be truncated at 250 characters
-# `categories` values may be the keys from `tool-categories.yml` file
