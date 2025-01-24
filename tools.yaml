@@ -1863,7 +1863,7 @@
   publisher: fnxpt
   description: Enrich cyclonedx files with a pattern
   repoUrl: https://github.com/fnxpt/cyclonedx-enrich
-  websiteUrl: https://github.com/fnxpt/yclonedx-enrich
+  websiteUrl: https://github.com/fnxpt/cyclonedx-enrich
   categories:
     - opensource
     - transform
