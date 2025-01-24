@@ -2083,3 +2083,16 @@
   categories:
   - opensource
   - analysis
+- name: SOOS
+  publisher: SOOS
+  description: Automate your software inventory. SOOS creates, ingests, and manages your Software Bill of Materials and uses patented SCA and the largest open-source SBOM database to find hidden vulnerabilities, license issues, and dependencies sooner.
+  websiteUrl: https://soos.io
+  categories:
+  - analysis
+  - proprietary
+  - github-action
+  - github-app
+  - build-integration
+  - distribute
+  - transform
+  - author
