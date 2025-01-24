@@ -1,7 +1,7 @@
 ---
 
 # `description` will be truncated at 250 characters
-# `categories` values may be the keys from `tool-categories.yml` file
+# `categories` values MUST be the keys from `tool-categories.yml` file
 
 - name: CycloneDX Core for Java
   publisher: CycloneDX
@@ -2096,3 +2096,6 @@
   - distribute
   - transform
   - author
+
+# `description` will be truncated at 250 characters
+# `categories` values MUST be the keys from `tool-categories.yml` file
