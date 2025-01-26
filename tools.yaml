@@ -2098,7 +2098,7 @@
   - author
 - name: Noma
   publisher: Noma Security
-  description: Noma provides an AI Application Security Platform for the entire AI lifecycle, focusing on automatic AI asset lineage discovery, supply chain risk management and ML-BOM creation, driving trustworthy, clear and secure lifecycle.
+  description: Noma provides an AI Application Security Platform for the entire AI lifecycle, focusing on automatic AI asset discovery and ML-BOM, AI supply chain risk management, and AI runtime protection, to drive trustworthy and secure AI adoption.
   websiteUrl: https://noma.security
   categories:
   - analysis
