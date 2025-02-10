@@ -2096,6 +2096,13 @@
   - distribute
   - transform
   - author
+- name: Noma
+  publisher: Noma Security
+  description: Noma provides an AI Application Security Platform for the entire AI lifecycle, focusing on automatic AI asset discovery and ML-BOM, AI supply chain risk management, and AI runtime protection, enabling trustworthy and secure AI adoption.
+  websiteUrl: https://noma.security
+  categories:
+  - analysis
+  - proprietary
 
 # `description` will be truncated at 250 characters
 # `categories` values MUST be the keys from `tool-categories.yml` file
