@@ -16,21 +16,30 @@ jobs:
       run:
         working-directory: docgen
     steps:
-    - name: Checkout
-      # see https://github.com/actions/checkout
-      uses: actions/checkout@v4
-    - name: Setup Python Environment
-      # see https://github.com/actions/setup-python
-      uses: actions/setup-python@v5
-      with:
-        python-version: ${{ env.PYTHON_VERSION_DEFAULT }}
-        architecture: 'x64'
-    - name: Generate Schema documentation
-      run: ./gen.sh
-    - name: Archive Schema documentation
-      # https://github.com/actions/upload-artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: JSON-Schema-documentation
-        path: docgen/docs
-        if-no-files-found: error
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python Environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION_DEFAULT }}
+          architecture: 'x64'
+
+      - name: Generate Schema documentation
+        run: ./gen.sh
+
+      # Upload docs so the deploy job can pick them up
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: docgen/docs  # The folder that has your generated docs
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: docs_json
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
