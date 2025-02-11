@@ -1,0 +1,294 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cyclonedx.org/schema/tool-center-v2.schema.json",
+  "title": "CycloneDX Tool Center v2 schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "tools"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "specVersion": {
+      "type": "string",
+      "enum": [
+        "2.0"
+      ]
+    },
+    "last_update": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "tools": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/tool"},
+      "uniqueItems": true
+    }
+  },
+  "definitions": {
+    "tool": {
+      "type": "object",
+      "required": [
+        "name",
+        "publisher",
+        "description"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publisher": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 250
+        },
+        "repository_url": {
+          "type": "string",
+          "format": "iri"
+        },
+        "website_url": {
+          "type": "string",
+          "format": "iri"
+        },
+        "capabilities": {
+          "type": "array",
+          "additionalItems": false,
+          "items": {
+            "type": "string",
+            "enum": [
+              "SBOM",
+              "SAASBOM",
+              "CBOM",
+              "AI/ML-BOM",
+              "HBOM",
+              "MBOM",
+              "OBOM",
+              "CDXA",
+              "RELEASE_NOTES",
+              "VDR/VEX"
+            ],
+            "meta:enum": {
+              "SBOM": "Software Bill of Materials",
+              "SAASBOM": "Software as-a Service Bill of Materials",
+              "CBOM": "Cryptography Bill of Materials",
+              "AI/ML-BOM": "AI/ML Bill of Materials",
+              "HBOM": "Hardware Bill of Materials",
+              "MBOM": "Manufacturing Bill of Materials (Formulation)",
+              "OBOM": "Operations Bill of Materials",
+              "CDXA": "CycloneDX Attestations",
+              "RELEASE_NOTES": "Standardized Release Notes Format",
+              "VDR/VEX": "Vulnerability Disclosure Report and Vulnerability eXploitability Exchange"
+            }
+          }
+        },
+        "availability": {
+          "type": "array",
+          "additionalItems": false,
+          "items": {
+            "type": "string",
+            "enum": [
+              "OPEN_SOURCE",
+              "FREE_WITH_PAID_UPGRADE",
+              "OSI_APPROVED",
+              "SUBSCRIPTION"
+            ],
+            "meta:enum": {
+              "OPEN_SOURCE": "Open Source",
+              "FREE_WITH_PAID_UPGRADE": "Free with Paid Upgrade",
+              "OSI_APPROVED": "OSI Approved License",
+              "SUBSCRIPTION": "Subscription"
+            }
+          }
+        },
+        "function": {
+          "type": "array",
+          "additionalItems": false,
+          "items": {
+            "type": "string",
+            "enum": [
+              "ANALYSIS",
+              "AUTHOR",
+              "DISTRIBUTE",
+              "PACKAGE_MANAGER_INTEGRATION",
+              "TRANSFORM",
+              "SIGNING/NOTARY"
+            ],
+            "meta:enum": {
+              "ANALYSIS": "Analysis",
+              "AUTHOR": "Author",
+              "DISTRIBUTE": "Distribute",
+              "PACKAGE_MANAGER_INTEGRATION": "Package manager integration",
+              "TRANSFORM": "Transform",
+              "SIGNING/NOTARY": "Signing and notary"
+            }
+          }
+        },
+        "analysis": {
+          "type": "array",
+          "additionalItems": false,
+          "items": {
+            "type": "string",
+            "enum": [
+              "SECURITY_VULNERABILITIES",
+              "POLICY_EVALUATION",
+              "RESOURCE_REPORTING",
+              "LICENSE_REPORTING"
+            ],
+            "meta:enum": {
+              "SECURITY_VULNERABILITIES": "Security vulnerabilities",
+              "POLICY_EVALUATION": "Policy evaluation",
+              "RESOURCE_REPORTING": "Resource reporting",
+              "LICENSE_REPORTING": "License reporting"
+            }
+          }
+        },
+        "transform": {
+          "type": "array",
+          "additionalItems": false,
+          "items": {
+            "type": "string",
+            "enum": [
+              "BOM_STANDARD_(CYCLONEDX/SPDX)",
+              "BOM_FORMAT_(XML/JSON)",
+              "BOM_VERSION"
+            ],
+            "meta:enum": {
+              "BOM_STANDARD_(CYCLONEDX/SPDX)": "BOM Standard: CycloneDX/SPDX",
+              "BOM_FORMAT_(XML/JSON)": "BOM Serialization Format: JSON / XML",
+              "BOM_VERSION": "BOM version"
+            }
+          }
+        },
+        "packaging": {
+          "type": "array",
+          "additionalItems": false,
+          "items": {
+            "type": "string",
+            "enum": [
+              "APPLICATION",
+              "COMMAND_LINE_UTILITY",
+              "CONTAINER_IMAGE",
+              "GITHUB_ACTION",
+              "GITHUB_APP",
+              "LIBRARY"
+            ],
+            "meta:enum": {
+              "APPLICATION": "Application",
+              "COMMAND_LINE_UTILITY": "Command line utility",
+              "CONTAINER_IMAGE": "Container image",
+              "GITHUB_ACTION": "GitHub Action",
+              "GITHUB_APP": "GitHub App",
+              "LIBRARY": "Library"
+            }
+          }
+        },
+        "library": {
+          "type": "array",
+          "additionalItems": false,
+          "items": {
+            "type": "string",
+            "enum": [
+              "C/C++",
+              "GO",
+              "JAVA",
+              "JAVASCRIPT_TYPESCRIPT",
+              "DOT_NET",
+              "NODE.JS",
+              "PERL",
+              "PHP",
+              "PYTHON",
+              "RUBY",
+              "RUST",
+              "SWIFT"
+            ]
+          }
+        },
+        "platform": {
+          "type": "array",
+          "additionalItems": false,
+          "items": {
+            "type": "string",
+            "enum": [
+              "LINUX",
+              "MAC",
+              "WINDOWS"
+            ]
+          }
+        },
+        "lifecycle": {
+          "type": "array",
+          "additionalItems": false,
+          "items": {
+            "type": "string",
+            "enum": [
+              "DESIGN",
+              "PRE-BUILD",
+              "BUILD",
+              "POST-BUILD",
+              "DEPLOYMENT",
+              "OPERATIONS",
+              "DISCOVERY",
+              "DECOMMISSION"
+            ]
+          }
+        },
+        "supportedStandards": {
+          "type": "array",
+          "additionalItems": false,
+          "items": {
+            "type": "string",
+            "enum": [
+              "CYCLONEDX",
+              "SPDX",
+              "PACKAGE_URL",
+              "CPE",
+              "OMNIBOR",
+              "SWID"
+            ]
+          }
+        },
+        "cycloneDxVersion": {
+          "type": "array",
+          "additionalItems": false,
+          "items": {
+            "type": "string",
+            "enum": [
+              "CYCLONEDX_V1.6",
+              "CYCLONEDX_V1.5",
+              "CYCLONEDX_V1.4",
+              "CYCLONEDX_V1.3",
+              "CYCLONEDX_V1.2"
+            ]
+          }
+        },
+        "supportedLanguages": {
+          "type": "array",
+          "additionalItems": false,
+          "items": {
+            "type": "string",
+            "enum": [
+              "C/C++",
+              "GO",
+              "JAVA",
+              "JAVASCRIPT/TYPESCRIPT",
+              ".NET",
+              "NODE.JS",
+              "PERL",
+              "PHP",
+              "PYTHON",
+              "RUBY",
+              "RUST",
+              "SWIFT"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
