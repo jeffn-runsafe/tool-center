@@ -2,6 +2,8 @@
 
 The CycloneDX Tool Center is the largest publicly available collection of SBOM (Software Bill of Materials) and xBOM (e.g., SaaSBOM, CBOM, HBOM) products, projects, and services. It serves as a centralized resource for anyone looking to explore, evaluate, or integrate BOM-related capabilities into their toolchains and workflows. The Tool Center is an integral part of the [CycloneDX website](https://cyclonedx.org).
 
+As of March 2025, the CycloneDX Tool Center leverages a JSON Schema in which `tools.json` must validate against. [View the human-readable documentation for the JSON Schema](https://cyclonedx.github.io/tool-center/).
+
 ## License
 
 All data within this repository is provided under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0). You are free to use, modify, and redistribute the data in accordance with the terms of this license.
