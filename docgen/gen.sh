@@ -25,7 +25,7 @@ generate () {
   local SCHEMA_FILE="$SCHEMA_PATH/tools.schema.json"
   echo "SCHEMA_FILE: $SCHEMA_FILE"
 
-  local OUT_FILE="$DOCS_PATH/json/index.html"
+  local OUT_FILE="$DOCS_PATH/index.html"
   local OUT_DIR
   OUT_DIR="$(dirname "$OUT_FILE")"
   rm -rf "$OUT_DIR"
