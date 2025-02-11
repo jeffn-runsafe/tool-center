@@ -4,7 +4,7 @@
   "title": "CycloneDX Tool Center v2 schema",
   "type": "object",
   "required": [
-    "schema_version",
+    "specVersion",
     "tools"
   ],
   "additionalProperties": false,
