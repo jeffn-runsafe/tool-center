@@ -960,6 +960,12 @@
   websiteUrl: https://www.jetstack.io/jetstack-secure/
   categories:
   - opensource
+- name: Keysight IoT Security Assessment
+  publisher: Keysight
+  description: Keysight IoT Security Assessment is a security testing platform that combines fuzzing, dynamic testing, and firmware analysis to identify vulnerabilities in IoT devices. Its firmware analysis capability delivers highly accurate SBOMs and detects CVEs, misconfigurations, hardcoded credentials, weak cryptography, and potential zero-day vulnerabilities.
+  websiteUrl: https://www.keysight.com/be/en/products/network-security/iot-security-assessment.html
+  categories:
+  - proprietary
 - name: Ko
   publisher: Google
   description: Build and deploy Go applications on Kubernetes. Generates CycloneDX
