@@ -1589,7 +1589,7 @@
      - analysis
 - name: Amazon Inspector SBOM Generator
   publisher: Amazon Inspector
-  description:  Amazon Inspector SBOM Generator (Sbomgen) is a tool that produces an SBOM for archives, container images, directories, local systems, and compiled Go and Rust binaries. Sbomgen scans for files that contain information about installed packages. Supports vulnerability scanning with Amazon Inspector Scan SBOM API.
+  description:  Amazon Inspector SBOM Generator (inspector-sbomgen) is a tool that produces SBOMs for archives, container images, directories, local systems, and compiled Go and Rust binaries. The tool scans supported artifacts with multiple collectors to generate an inventory of installed packages and associated metadata. These SBOMs can then be used for vulnerability scanning with the Amazon Inspector Scan SBOM API (active AWS account required).
   websiteUrl: https://docs.aws.amazon.com/inspector/latest/user/sbom-generator.html
   categories:
      - proprietary
