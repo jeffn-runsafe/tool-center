@@ -1587,6 +1587,15 @@
   categories:
      - proprietary
      - analysis
+- name: Amazon Inspector SBOM Generator
+  publisher: Amazon Inspector
+  description:  Amazon Inspector SBOM Generator (Sbomgen) is a tool that produces an SBOM for archives, container images, directories, local systems, and compiled Go and Rust binaries. Sbomgen scans for files that contain information about installed packages.
+  websiteUrl: https://docs.aws.amazon.com/inspector/latest/user/sbom-generator.html
+  categories:
+     - proprietary
+     - analysis
+     - build-integration
+     - distribute
 - name: Xygeni Software Supply-Chain Security
   publisher: Xygeni
   description: Xygeni is a software supply chain security solution that provides visibility, security and integrity in DevOps environments, reducing the risk of breaches and detecting potential attacks, ensuring security in your software releases.
