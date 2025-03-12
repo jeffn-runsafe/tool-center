@@ -2120,7 +2120,7 @@
 - name: RunSafe C/C++ Build-time SBOM Generator
   publisher: RunSafe Security
   description: RunSafe Security generates a C/C++ SBOM at build-time without the need for a package manager. RunSafe works flexibly across build environments, reports on all library dependencies, and is enriched with information about the final target.
-  websiteUrl: https://runsafesecurity.com/c-c-plus-plus-sbom/?utm_campaign=9722897-Software%20Tools&utm_source=Website&utm_medium=CycloneDX&utm_content=SBOM
+  websiteUrl: https://runsafesecurity.com/c-c-plus-plus-sbom/
   categories:
   - proprietary
   - build-integration
